@@ -79,5 +79,15 @@
   .actual-letter {
     max-width: 90%;
   }
+
+  .actual-letter img {
+    margin-top: 30px;
+    max-width: 100%;
+  }
+
+  .actual-letter p {
+    padding: 0 0;
+    font-size: x-large;
+  }
 }
 
