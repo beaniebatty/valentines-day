@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALENTINES STOP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <video autoplay muted loop playsinline id="background-video">
+        <source src="cat march.mp4" type="video/mp4">
+    </video>
+    <img onclick="playPause()" class="albumIMG" id="monsoon" src="monsoon.jpg">
+    <audio id="myAudio" src="call_on_me.mp3"></audio>
+
+    <div class="letter">
+        <span onclick="playPause()" id="playBTN" class="glyphicon glyphicon-play"></span></p>
+    </div>
+
+    <div class="actual-letter" id="letter">
+        <p>
+            To my dearest Sean,<br><br>
+            
+            I know we probably won't be able to see each other on Valentine's Day but I figured I'd do something even if it's small. Since we became friends seven years ago,
+            I haven't met anyone else that I could so confidently say that I see as my soulmate. Through everything we've experienced together you've remained my second half and there's genuinely
+            no one else on Earth I'd rather spend my most important moments with. You have no idea how much I wish I could do way more than make this website but I need to show you a tiny bit of what's
+            gonna allow me to do more in the future :3. For now, I just wanna let you know how much you mean to me, even though there aren't enough words in any language to express just how important you are to me.
+            I hope everything goes your way this month and we find 10k dollars on the ground somewhere so we can have the best sushi dinner ever!!<br><br>
+
+            I love you so so much Binu and even though I know you don't always feel like it, you've never been and never will be a burden on me and there's nothing that makes me prouder than being someone important in your life.<br><br>
+
+            With Love,<br>
+            Micah
+
+        </p>
+
+        <img src="img2.jpeg">
+         
+    </div>
+</body>
+
+<script>
+    const audio = document.getElementById("myAudio");
+    
+    function playPause() {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause()
+        }
+    }
+</script>
+
+<script>
+    const item = document.getElementById("monsoon");
+    const item2 = document.getElementById("playBTN")
+    const item3 = document.getElementById("letter")
+    const item4 = document.getElementById("background-video")
+    let clicked = false;
+    
+    item.addEventListener("click", () => {
+
+        if (clicked) return; // <-- STOP if already clicked
+
+        clicked = true;
+
+        item.style.opacity = 0;
+
+        setTimeout(function(){
+            item2.style.opacity = 0.8;
+            item.remove();
+            }, 500);
+        
+        setTimeout(function(){
+            item3.style.opacity = 100;
+            item4.style.opacity = 0.2;
+        }, 500)
+        
+    });
+</script>
+</html>
